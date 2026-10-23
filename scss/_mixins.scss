@@ -1,0 +1,48 @@
+@use "variables-typography-spacing" as *;
+
+/* typography */
+
+@mixin text-preset-1 {
+  font-size: $fs1;
+  font-weight: $font-weight-bold;
+  line-height: $lh1;
+  letter-spacing: $ls1;
+}
+
+@mixin text-preset-2 {
+  font-size: $fs2;
+  font-weight: $font-weight-bold;
+  line-height: $lh2;
+  letter-spacing: $ls2;
+}
+
+@mixin text-preset-3 {
+  font-size: $fs3;
+  font-weight: $font-weight-bold;
+  line-height: $lh3;
+  letter-spacing: $ls3;
+}
+
+@mixin text-preset-4 {
+  font-size: $fs4;
+  font-weight: $font-weight-regular;
+  line-height: $lh4;
+  letter-spacing: $ls4;
+}
+
+@mixin text-preset-4-bold {
+  @include text-preset-4;
+  font-weight: $font-weight-bold;
+}
+
+@mixin text-preset-5 {
+  font-size: $fs5;
+  font-weight: $font-weight-regular;
+  line-height: $lh5;
+  letter-spacing: $ls5;
+}
+
+@mixin text-preset-5-bold {
+  @include text-preset-5;
+  font-weight: $font-weight-bold;
+}
