@@ -1,0 +1,70 @@
+@use "variables-colors" as *;
+@use "variables-typography-spacing" as *;
+@use "mixins" as *;
+@use "reset" as *;
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: $font-family-base;
+  background-color: $beige100;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  background-color: $grey900;
+  border-radius: 0 $spacing200 $spacing200 0;
+  gap: $spacing300;
+  padding-bottom: $spacing300;
+}
+
+.sidebar__logo {
+  padding: $spacing500 $spacing400;
+  align-self: flex-start;
+}
+.sidebar__nav {
+  flex: 1;
+}
+.sidebar__link {
+  @include text-preset-3;
+  color: $grey300;
+  display: flex;
+  align-items: center;
+  gap: $spacing200;
+  padding: $spacing200 $spacing400;
+  border-left: 4px solid transparent;
+  border-radius: 0 $spacing150 $spacing150 0;
+
+  &--active {
+    background-color: $beige100;
+    color: $grey900;
+    border-left-color: $green;
+  }
+}
+
+.sidebar__list {
+  padding-right: $spacing300;
+}
+
+.sidebar__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  @include text-preset-3;
+  margin-top: auto;
+  color: $grey300;
+  display: flex;
+  align-items: center;
+  gap: $spacing200;
+  padding: $spacing200 $spacing400;
+
+}
