@@ -66,5 +66,47 @@ body {
   align-items: center;
   gap: $spacing200;
   padding: $spacing200 $spacing400;
+}
 
+.main {
+  flex: 1;
+  padding: $spacing400 $spacing500;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: $spacing300;
+  align-content: start;
+}
+
+.main__title {
+  grid-column: 1/-1;
+  @include text-preset-1;
+  color: $grey900;
+}
+
+.summary-card {
+  grid-column: span 4;
+  background-color: $white;
+  padding: $spacing300;
+  border-radius: $spacing150;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing150;
+
+  &__label {
+    @include text-preset-4;
+    color: $grey500;
+  }
+
+  &__amount {
+    @include text-preset-1;
+    color: $grey900;
+  }
+
+  &--dark {
+    background-color: $grey900;
+    .summary-card__label,
+    .summary-card__amount {
+      color: $white;
+    }
+  }
 }
