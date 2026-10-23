@@ -1,7 +1,7 @@
-@use "variables-typography-spacing" as *;
+@use "variables-typography" as *;
+@use "variables-spacing" as *;
 
 /* typography */
-
 @mixin text-preset-1 {
   font-size: $fs1;
   font-weight: $font-weight-bold;
