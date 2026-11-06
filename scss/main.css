@@ -1,0 +1,254 @@
+/* typography */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "public sans", sans-serif;
+  background-color: #f8f4f0;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  background-color: #201f24;
+  border-radius: 0 1.6rem 1.6rem 0;
+  gap: 2.4rem;
+  padding-bottom: 2.4rem;
+}
+
+.sidebar__logo {
+  padding: 4rem 3.2rem;
+  align-self: flex-start;
+}
+
+.sidebar__nav {
+  flex: 1;
+}
+
+.sidebar__link {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #b3b3b3;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem 3.2rem;
+  border-left: 4px solid transparent;
+  border-radius: 0 1.2rem 1.2rem 0;
+}
+.sidebar__link--active {
+  background-color: #f8f4f0;
+  color: #201f24;
+  border-left-color: #277c78;
+}
+
+.sidebar__list {
+  padding-right: 2.4rem;
+}
+
+.sidebar__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  margin-top: auto;
+  color: #b3b3b3;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 1.6rem 3.2rem;
+}
+
+.main {
+  flex: 1;
+  padding: 3.2rem 4rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2.4rem;
+  align-content: start;
+}
+
+.main__title {
+  grid-column: 1/-1;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0rem;
+  color: #201f24;
+}
+
+.summary-card {
+  grid-column: span 4;
+  background-color: #ffffff;
+  padding: 2.4rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.summary-card__label {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #696868;
+}
+.summary-card__amount {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0rem;
+  color: #201f24;
+}
+.summary-card--dark {
+  background-color: #201f24;
+}
+.summary-card--dark .summary-card__label,
+.summary-card--dark .summary-card__amount {
+  color: #ffffff;
+}
+
+.pots {
+  grid-column: span 7;
+  background-color: #ffffff;
+  padding: 3.2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.pots__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0rem;
+  color: #201f24;
+}
+.pots__header {
+  color: #696868;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pots__link {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #696868;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.pots__total {
+  background-color: #f8f4f0;
+  padding: 1.6rem;
+  border-radius: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  flex: 1;
+}
+.pots__total-label {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #696868;
+}
+.pots__total-amount {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0rem;
+  color: #201f24;
+}
+.pots__content {
+  display: flex;
+  gap: 2rem;
+}
+.pots__list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+.pots__item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding-left: 1.6rem;
+  position: relative;
+}
+.pots__item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 0.4rem;
+  border-radius: 0.8rem;
+}
+.pots__item--green::before {
+  background-color: #277c78;
+}
+.pots__item--cyan::before {
+  background-color: #82c9d7;
+}
+.pots__item--navy::before {
+  background-color: #626070;
+}
+.pots__item--yellow::before {
+  background-color: #f2cdac;
+}
+.pots__name {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #696868;
+}
+.pots__amount {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  font-weight: 700;
+  color: #201f24;
+}/*# sourceMappingURL=main.css.map */
