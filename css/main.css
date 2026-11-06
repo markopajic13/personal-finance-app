@@ -256,6 +256,8 @@ body {
 
 .budget-card {
   grid-column: span 5;
+  grid-row: span 2;
+  align-self: start;
   background-color: #ffffff;
   padding: 3.2rem;
   border-radius: 1.2rem;
@@ -326,6 +328,7 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 1.6rem;
+  padding: 3.2rem 0;
 }
 .budget-card__legend {
   display: flex;
@@ -374,6 +377,82 @@ body {
   letter-spacing: 0rem;
   font-weight: 700;
   color: #201f24;
+}
+
+.transactions {
+  grid-column: span 7;
+  background-color: #ffffff;
+  padding: 3.2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.transactions__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.transactions__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0rem;
+  color: #201f24;
+}
+.transactions__link {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #696868;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.transactions__item {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.transactions__item:last-child {
+  border-bottom: none;
+}
+.transactions__avatar {
+  width: 4rem;
+  border-radius: 50%;
+}
+.transactions__name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  font-weight: 700;
+  color: #201f24;
+  margin-right: auto;
+}
+.transactions__info {
+  text-align: right;
+}
+.transactions__amount {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  font-weight: 700;
+  color: #201f24;
+}
+.transactions__amount--positive {
+  color: #277c78;
+}
+.transactions__date {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #696868;
 }
 
 /*# sourceMappingURL=main.css.map */
