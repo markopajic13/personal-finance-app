@@ -381,6 +381,7 @@ body {
 
 .transactions {
   grid-column: span 7;
+  grid-row: span 2;
   background-color: #ffffff;
   padding: 3.2rem;
   border-radius: 1.2rem;
@@ -453,6 +454,75 @@ body {
   line-height: 150%;
   letter-spacing: 0rem;
   color: #696868;
+}
+
+.bills {
+  grid-column: span 5;
+  background-color: #ffffff;
+  padding: 3.2rem;
+  border-radius: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+.bills__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bills__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: 0rem;
+  color: #201f24;
+}
+.bills__link {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #696868;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.bills__list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.bills__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.6rem;
+  background-color: #f8f4f0;
+  border-radius: 0.8rem;
+  border-left: 0.4rem solid;
+}
+.bills__item--green {
+  border-color: #277c78;
+}
+.bills__item--yellow {
+  border-color: #f2cdac;
+}
+.bills__item--cyan {
+  border-color: #82c9d7;
+}
+.bills__name {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  color: #696868;
+}
+.bills__amount {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 150%;
+  letter-spacing: 0rem;
+  font-weight: 700;
+  color: #201f24;
 }
 
 /*# sourceMappingURL=main.css.map */
