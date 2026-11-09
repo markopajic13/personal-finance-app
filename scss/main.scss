@@ -114,6 +114,7 @@ body {
 
 .pots {
   grid-column: span 7;
+  align-self: start;
   background-color: $white;
   padding: $spacing400;
   border-radius: $spacing150;
@@ -212,5 +213,201 @@ body {
   &__amount {
     @include text-preset-4-bold;
     color: $grey900;
+  }
+}
+
+.budget-card {
+  grid-column: span 5;
+  grid-row: span 2;
+  align-self: start;
+  background-color: $white;
+  padding: $spacing400;
+  border-radius: $spacing150;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing250;
+
+  &__chart {
+    width: 24rem;
+    height: 24rem;
+    border-radius: 50%;
+    background-color: $grey900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: conic-gradient(
+      $green 0% 5%,
+      $cyan 5% 68%,
+      $yellow 68% 83%,
+      $navy 83% 100%
+    );
+  }
+
+  &__chart-center {
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    background-color: $white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 $spacing150 rgba($white, 0.25);
+  }
+
+  &__spent {
+    @include text-preset-1;
+    color: $grey900;
+  }
+
+  &__limit {
+    @include text-preset-5;
+    color: $grey500;
+  }
+
+  &__title {
+    @include text-preset-2;
+    color: $grey900;
+  }
+
+  &__header {
+    color: $grey500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__link {
+    @include text-preset-4;
+    color: $grey500;
+    display: flex;
+    align-items: center;
+    gap: $spacing150;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: $spacing200;
+    padding: $spacing400 0;
+  }
+
+  &__legend {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing200;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing50;
+    padding-left: $spacing200;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: $spacing50;
+      border-radius: $spacing100;
+    }
+
+    &--green::before {
+      background-color: $green;
+    }
+    &--cyan::before {
+      background-color: $cyan;
+    }
+    &--navy::before {
+      background-color: $navy;
+    }
+    &--yellow::before {
+      background-color: $yellow;
+    }
+  }
+
+  &__name {
+    @include text-preset-5;
+    color: $grey500;
+  }
+
+  &__amount {
+    @include text-preset-4-bold;
+    color: $grey900;
+  }
+}
+
+.transactions {
+  grid-column: span 7;
+  background-color: $white;
+  padding: $spacing400;
+  border-radius: $spacing150;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing250;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    @include text-preset-2;
+    color: $grey900;
+  }
+
+  &__link {
+    @include text-preset-4;
+    color: $grey500;
+    display: flex;
+    align-items: center;
+    gap: $spacing150;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: $spacing200;
+    padding: $spacing250 0;
+    border-bottom: 1px solid $grey100;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__avatar {
+    width: 4rem;
+    border-radius: 50%;
+  }
+
+  &__name {
+    @include text-preset-4-bold;
+    color: $grey900;
+    margin-right: auto;
+  }
+
+  &__info {
+    text-align: right;
+  }
+
+  &__amount {
+    @include text-preset-4-bold;
+    color: $grey900;
+
+    &--positive {
+      color: $green;
+    }
+  }
+
+  &__date {
+    @include text-preset-5;
+    color: $grey500;
   }
 }
