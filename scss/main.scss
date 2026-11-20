@@ -32,9 +32,11 @@ body {
   padding: $spacing500 $spacing400;
   align-self: flex-start;
 }
+
 .sidebar__nav {
   flex: 1;
 }
+
 .sidebar__link {
   @include text-preset-3;
   color: $grey300;
@@ -57,10 +59,10 @@ body {
 }
 
 .sidebar__toggle {
+  @include text-preset-3;
   background: none;
   border: none;
   cursor: pointer;
-  @include text-preset-3;
   margin-top: auto;
   color: $grey300;
   display: flex;
@@ -79,7 +81,7 @@ body {
 }
 
 .main__title {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
   @include text-preset-1;
   color: $grey900;
 }
@@ -194,12 +196,15 @@ body {
     &--green::before {
       background-color: $green;
     }
+
     &--cyan::before {
       background-color: $cyan;
     }
+
     &--navy::before {
       background-color: $navy;
     }
+
     &--yellow::before {
       background-color: $yellow;
     }
@@ -231,11 +236,9 @@ body {
     width: 24rem;
     height: 24rem;
     border-radius: 50%;
-    background-color: $grey900;
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: conic-gradient(
       $green 0% 5%,
       $cyan 5% 68%,
@@ -320,12 +323,15 @@ body {
     &--green::before {
       background-color: $green;
     }
+
     &--cyan::before {
       background-color: $cyan;
     }
+
     &--navy::before {
       background-color: $navy;
     }
+
     &--yellow::before {
       background-color: $yellow;
     }
@@ -458,9 +464,11 @@ body {
     &--green {
       border-color: $green;
     }
+
     &--yellow {
       border-color: $yellow;
     }
+
     &--cyan {
       border-color: $cyan;
     }
@@ -474,5 +482,176 @@ body {
   &__amount {
     @include text-preset-4-bold;
     color: $grey900;
+  }
+}
+
+@include tablet {
+  .main {
+    padding: $spacing500 $spacing500 10.6rem;
+  }
+
+  .main__title {
+    margin-bottom: 1.8rem;
+  }
+
+  .sidebar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: $spacing100 $spacing500 0;
+    border-radius: $spacing100 $spacing100 0 0;
+    z-index: 10;
+  }
+
+  .sidebar__logo,
+  .sidebar__toggle {
+    display: none;
+  }
+
+  .sidebar__list {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 0;
+  }
+
+  .sidebar__list li {
+    flex: 0 0 10.4rem;
+  }
+
+  .sidebar__link {
+    @include text-preset-5-bold;
+    flex-direction: column;
+    gap: $spacing50;
+    padding: $spacing100 0;
+    border-left: none;
+    border-bottom: 4px solid transparent;
+    border-radius: $spacing100 $spacing100 0 0;
+
+    &--active {
+      border-bottom-color: $green;
+    }
+  }
+
+  .pots,
+  .transactions,
+  .budget-card,
+  .bills {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .pots {
+    margin-top: $spacing100;
+  }
+
+  .pots__content {
+    align-items: center;
+  }
+
+  .pots__total {
+    flex: 0 0 24.7rem;
+    padding-block: $spacing250;
+  }
+
+  .pots__total-amount {
+    margin-top: 1.1rem;
+  }
+
+  .pots__list {
+    flex: 1;
+  }
+
+  .transactions {
+    order: 1;
+    gap: $spacing400;
+  }
+
+  .transactions__item:first-child {
+    padding-top: 0;
+  }
+
+  .transactions__item:last-child {
+    padding-bottom: 0;
+  }
+
+  .transactions__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .budget-card {
+    order: 2;
+  }
+
+  .budget-card__chart {
+    margin-inline: auto;
+  }
+
+  .bills {
+    order: 3;
+  }
+
+  .bills__item {
+    padding-left: $spacing150;
+  }
+}
+
+@include mobile {
+  .main {
+    padding: $spacing300 $spacing200 7.6rem;
+    gap: $spacing200;
+  }
+
+  .main__title {
+    margin-bottom: $spacing200;
+  }
+
+  .summary-card {
+    grid-column: 1 / -1;
+    padding: $spacing250;
+  }
+
+  .pots,
+  .transactions,
+  .budget-card,
+  .bills {
+    padding: $spacing300 $spacing250;
+  }
+
+  .pots {
+    margin-top: $spacing200;
+  }
+
+  .pots__content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .pots__total {
+    flex: none;
+  }
+
+  .budget-card__content {
+    flex-direction: column;
+    padding: $spacing100 0 0;
+    gap: $spacing200;
+  }
+  .budget-card__legend {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: $spacing200;
+  }
+
+  .sidebar {
+    padding: $spacing100 $spacing200 0;
+  }
+  .sidebar__list li {
+    flex: 1;
+  }
+  .sidebar__text {
+    display: none;
   }
 }
